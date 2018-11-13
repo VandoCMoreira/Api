@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="apiDBModelStoreContainer" CdmEntityContainer="apiDBEntities">
+    <EntitySetMapping Name="ChoiceDetails">
+      <EntityTypeMapping TypeName="apiDBModel.ChoiceDetail">
+        <MappingFragment StoreEntitySet="ChoiceDetails">
+          <ScalarProperty Name="ChoiceId" ColumnName="ChoiceId" />
+          <ScalarProperty Name="ChoiceName" ColumnName="ChoiceName" />
+          <ScalarProperty Name="Voto" ColumnName="Voto" />
+          <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Questions">
+      <EntityTypeMapping TypeName="apiDBModel.Question">
+        <MappingFragment StoreEntitySet="Questions">
+          <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+          <ScalarProperty Name="QuestionName" ColumnName="QuestionName" />
+          <ScalarProperty Name="Img_url" ColumnName="Img_url" />
+          <ScalarProperty Name="Thumb_url" ColumnName="Thumb_url" />
+          <ScalarProperty Name="Published_at" ColumnName="Published_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

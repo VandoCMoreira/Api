@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="apiDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ChoiceDetail">
+    <Key>
+      <PropertyRef Name="ChoiceId" />
+    </Key>
+    <Property Name="ChoiceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ChoiceName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Voto" Type="Int32" Nullable="false" />
+    <Property Name="QuestionId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Question">
+    <Key>
+      <PropertyRef Name="QuestionId" />
+    </Key>
+    <Property Name="QuestionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="QuestionName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Img_url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Thumb_url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Published_at" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="apiDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ChoiceDetails" EntityType="Self.ChoiceDetail" />
+    <EntitySet Name="Questions" EntityType="Self.Question" />
+  </EntityContainer>
+</Schema>
